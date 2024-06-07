@@ -1,18 +1,9 @@
-:root {
-  --brand-primary: #0768ac;
-  --brand-secondary: #03c180;
-  --bg_default: #ffffff;
-  --bg_body: #f0f9ff;
-  --lines-color: #dddddd;
-  --body-text: #333333;
-  --heart-color: #dc143c;
-}
-
 body {
   height: 100vh;
   width: 100%;
   font-family: Nunito Sans;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -22,7 +13,7 @@ header {
   flex-direction: column;
   /* justify-content: space-between; */
   align-items: center;
-  border-bottom: solid 2px black;
+  background-color: var(--bg_default);
 }
 
 header .navbar {
@@ -46,7 +37,14 @@ header .navbar {
   font-size: 15px;
   font-weight: 400;
   padding: 0;
+  cursor: pointer;
 }
+.dark,
+.fav {
+  color: var(--body-text);
+  border: var(--lines-color);
+}
+
 .navbar nav button p {
   display: flex;
   justify-content: space-evenly;
@@ -99,14 +97,34 @@ p {
   font-weight: 700;
 }
 
-.welcoming div p {
+.welP {
   color: var(--body-text);
 }
+
 .empty {
   height: 70px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-main .search {
+.right-tri {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 1520px solid var(--brand-secondary);
+  border-bottom: 68px solid transparent;
+}
+
+.left-tri {
+  position: relative;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-left: 1300px solid var(--brand-primary);
+  border-bottom: 68px solid transparent;
+}
+
+.search {
   height: 80px;
   width: 95%;
   display: flex;
@@ -125,6 +143,7 @@ main .search {
   border: solid 0.5px var(--lines-color);
   border-radius: 10px;
   box-shadow: 0px 0px 1px 0px var(--lines-color);
+  color: var(--body-text);
 }
 
 .search-section #search {
@@ -135,6 +154,7 @@ main .search {
   outline: none;
   font-size: large;
   padding-left: 8px;
+  background-color: var(--bg_default);
 }
 
 .search-section p {
@@ -176,10 +196,13 @@ main .search {
   border: none;
   font-size: medium;
   padding-bottom: 8px;
+  background-color: var(--bg_default);
+  color: var(--body-text);
 }
 
 .topics {
   width: 90%;
+  color: var(--body-text);
 }
 .topics h1 {
   margin-top: 0;
@@ -271,6 +294,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--bg_body);
+  color: var(--body-text);
 }
 
 footer span {

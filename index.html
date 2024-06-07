@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
+    <link id="theme" rel="stylesheet" href="light.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,10 +18,10 @@
       <section class="navbar">
         <h3>Web Topics</h3>
         <nav>
-          <button>
+          <button class="dark">
             <p><ion-icon name="moon-outline"></ion-icon>Dark Mode</p>
           </button>
-          <button>
+          <button class="fav">
             <p><ion-icon name="heart-outline"></ion-icon>Favourites</p>
           </button>
         </nav>
@@ -28,11 +29,16 @@
     </header>
     <main>
       <section class="welcoming-section">
-        <div class="empty"></div>
+        <div class="empty">
+          <span class="right-tri"></span>
+          <span class="left-tri"></span>
+        </div>
         <section class="welcoming">
           <div>
             <h2>Welcome to our website!</h2>
-            <p>We have a new design that's fresh, modern, and easy to use</p>
+            <p class="welP">
+              We have a new design that's fresh, modern, and easy to use
+            </p>
           </div>
         </section>
       </section>
@@ -901,5 +907,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
