@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Topics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="navbar">
+        <h3>Web Topics</h3>
+        <nav>
+          <button>
+            <p><ion-icon name="moon-outline"></ion-icon>Dark Mode</p>
+          </button>
+          <button>
+            <p><ion-icon name="heart-outline"></ion-icon>Favourites</p>
+          </button>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="welcoming-section">
+        <div class="empty"></div>
+        <section class="welcoming">
+          <div>
+            <h2>Welcome to our website!</h2>
+            <p>We have a new design that's fresh, modern, and easy to use</p>
+          </div>
+        </section>
+      </section>
+      <article class="search">
+        <form class="search-section">
+          <p><ion-icon name="search-outline"></ion-icon></p>
+
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search the website..."
+          />
+          <div class="sort">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+              <option value="#">Default</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+          <div class="filter">
+            <label for="filter">Filter by:</label>
+            <select id="filter">
+              <option value="#">Default</option>
+              <option value="id">ID</option>
+            </select>
+          </div>
+        </form>
+      </article>
+      <article class="topics">
+        <h1>"24" Web Topics Found</h1>
+        <section class="topics-details">
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/html.png" alt="HTML" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Languages</p>
+                <h4 class="name">HTML</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Sarah Smith</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/css.webp" alt="CSS" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Languages</p>
+                <h4 class="name">CSS</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: David Lee</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/javascript.jpg" alt="javascript" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Languages</p>
+                <h4 class="name">JavaScript</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Emily Chen</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/jquery.png" alt="jquery" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Frontend Frameworks and Libraries</p>
+                <h4 class="name">jQuery</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: John Johnson</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/angular.png" alt="angular" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Frontend Frameworks and Libraries</p>
+                <h4 class="name">Angular</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Jessica Davis</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/react.webp" alt="react" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Frontend Frameworks and Libraries</p>
+                <h4 class="name">React</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Daniel Brown</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/vuejs.jpeg" alt="vuejs" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Frontend Frameworks and Libraries</p>
+                <h4 class="name">Vue.js</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Ava Jones</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/nodejs.webp" alt="nodejs" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Backend Frameworks and Libraries</p>
+                <h4 class="name">Node.js</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Michael Kim</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/expressjs.webp" alt="expressjs" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Backend Frameworks and Libraries</p>
+                <h4 class="name">Express.js</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Sophia Rodrigues</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/ruby.jpeg" alt="ruby" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Backend Frameworks and Libraries</p>
+                <h4 class="name">Ruby and Rails</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: William Lee</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/django.jpeg" alt="django" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Backend Frameworks and Libraries</p>
+                <h4 class="name">Django</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Olivia Martinez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/flask.webp" alt="flask" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Backend Frameworks and Libraries</p>
+                <h4 class="name">Flask</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Ethan Thompson</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/sql.png" alt="sql" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Databases and APIs</p>
+                <h4 class="name">SQL</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Madison Daivs</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/nosql.png" alt="nosql" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Databases and APIs</p>
+                <h4 class="name">NoSQL</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Isabella Wilson</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/restapi.jpeg" alt="restapi" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Databases and APIs</p>
+                <h4 class="name">REST APIs</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Jacob Garcia</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/graphql.png" alt="graphql" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Databases and APIs</p>
+                <h4 class="name">GraphQL</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Mia Brown</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/oauth.png" alt="oauth" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">OAuth</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Evelyn Nguyen</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/json.png" alt="json" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">JSON</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Liam Hernandez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/ajax.gif" alt="ajax" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development and Concepts T..</p>
+                <h4 class="name">AJAX</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Avery Perez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/websockets.png" alt="websockets" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Websockets</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Victoria Kim</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/responsive.gif" alt="responsive" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Responsive Design</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Ryan Jones</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/accessibility.png" alt="accessibility" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Accessibility</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Samantha Martin</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/ux.jpeg" alt="ux" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">User Experience (UX)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Luke Davis</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/ui.png" alt="ui" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">User Interface (UI)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Grace Wilson</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/design-systems.jpeg" alt="design-systems" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Design Systems</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Noah Martinez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/performance.png" alt="performance" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Performance Optimization</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Chole Taylor</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/cross-browser.jpeg" alt="cross" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Cross-Browser Compatibility</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: David Lee</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/seo.jpeg" alt="seo" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Search Engine Optimization (SEO)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Emily Kim</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/web-security.jpeg" alt="web-security" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Web Security</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Gabriel Hernandez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/testing.jpeg" alt="testing" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Testing and Debugging</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Avery Perez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/ci-cd.jpeg" alt="ci-cd" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Continuous Integration/Continuous...</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Madison Davis</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/devops.png" alt="devops" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">DevOps</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Isabella Wilson</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/cloud.jpeg" alt="cloud" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Cloud Computing</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Jacob Garcia</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/docker.png" alt="docker" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Docker</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Mia Brown</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/microservices.png" alt="microservices" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Microservices</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Evelyn Nguyen</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/pwa.png" alt="pwa" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Progressive Web Apps (PWA)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Liam Hernandez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/wai.jpeg" alt="wai" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Web Accessibility Initiative (WAI)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Avery Perez</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/cms.png" alt="cms" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Content Management Systems (CMS)</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Victoria Kim</h4>
+              </div>
+            </div>
+          </section>
+          <section class="topic">
+            <div class="topic-img">
+              <img src="./Logos/analytics.png" alt="analytics" />
+            </div>
+            <div class="topic-details">
+              <div class="topic-name">
+                <p class="cate">Web Development Concepts and T..</p>
+                <h4 class="name">Web Analytics</h4>
+              </div>
+              <div class="topic-review">
+                <p class="rate">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </p>
+                <h4 class="author">Author: Ryan Jones</h4>
+              </div>
+            </div>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <h3>
+        Developed with <span><ion-icon name="heart"></ion-icon></span> 2023
+      </h3>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+:root {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Nunito Sans;
+  margin: 0;
+}
+
+header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-bottom: solid 2px black;
+}
+
+header .navbar {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h3 {
+  color: var(--brand-primary);
+}
+
+.navbar nav button {
+  height: 35px;
+  width: 120px;
+  background: none;
+  border: solid 2px var(--lines-color);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0;
+}
+.navbar nav button p {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  padding-left: 11px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg_body);
+}
+
+.welcoming-section {
+  width: 100%;
+  background-color: var(--bg_default);
+}
+
+.welcoming {
+  height: 70%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.welcoming div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcoming div h2,
+p {
+  width: 30%;
+  text-align: left;
+  margin: 0;
+}
+.welcoming div h2 {
+  color: var(--brand-secondary);
+  font-weight: 700;
+}
+
+.welcoming div p {
+  color: var(--body-text);
+}
+.empty {
+  height: 70px;
+  width: 100%;
+}
+main .search {
+  height: 80px;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search-section {
+  height: 65%;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg_default);
+  border: solid 0.5px var(--lines-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 0px var(--lines-color);
+}
+
+.search-section #search {
+  height: 100%;
+  width: 75%;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: large;
+  padding-left: 8px;
+}
+
+.search-section p {
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 2%;
+}
+
+.sort,
+.filter {
+  height: 100%;
+  width: 12.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: none;
+}
+
+.sort {
+  border-right: solid 2px var(--lines-color);
+  border-left: solid 2px var(--lines-color);
+}
+
+.sort label,
+.filter label {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: small;
+  font-weight: 600;
+}
+
+#sort,
+#filter {
+  height: 50%;
+  width: 100%;
+  border: none;
+  font-size: medium;
+  padding-bottom: 8px;
+}
+
+.topics {
+  width: 90%;
+}
+.topics h1 {
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topics-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 35px;
+}
+
+.topic {
+  width: 100%;
+  min-height: 300px;
+  background-color: var(--bg_default);
+  border-radius: 10px;
+}
+
+.topic-img {
+  height: 45%;
+  width: 100%;
+}
+
+.topic-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.topic-details {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.topic-name {
+  height: 55%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cate,
+.name {
+  width: 100%;
+  margin-top: 0;
+}
+
+.cate {
+  font-size: 14px;
+}
+
+.name {
+  margin-bottom: 45px;
+}
+
+.topic-review {
+  height: 45%;
+  width: 90%;
+}
+
+.rate {
+  height: 50%;
+  width: 100%;
+  color: goldenrod;
+}
+
+.author {
+  width: 100%;
+  margin-top: 0;
+  font-size: small;
+  font-weight: 400;
+  color: gray;
+}
+
+footer {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg_body);
+}
+
+footer span {
+  height: 100%;
+  color: var(--heart-color);
+}
