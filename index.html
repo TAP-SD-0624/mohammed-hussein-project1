@@ -19,10 +19,14 @@
         <h3>Web Topics</h3>
         <nav>
           <button class="dark">
-            <p><ion-icon name="moon-outline"></ion-icon>Dark Mode</p>
+            <p>
+              <ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span>
+            </p>
           </button>
           <button class="fav">
-            <p><ion-icon name="heart-outline"></ion-icon>Favourites</p>
+            <p>
+              <ion-icon name="heart-outline"></ion-icon><span>Favourites</span>
+            </p>
           </button>
         </nav>
       </section>
@@ -30,8 +34,8 @@
     <main>
       <section class="welcoming-section">
         <div class="empty">
-          <span class="right-tri"></span>
-          <span class="left-tri"></span>
+          <div class="left-tri"></div>
+          <div class="right-tri"></div>
         </div>
         <section class="welcoming">
           <div>
@@ -44,27 +48,32 @@
       </section>
       <article class="search">
         <form class="search-section">
-          <p><ion-icon name="search-outline"></ion-icon></p>
+          <div class="searchBar">
+            <p><ion-icon name="search-outline"></ion-icon></p>
 
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search the website..."
-          />
-          <div class="sort">
-            <label for="sort">Sort by:</label>
-            <select id="sort">
-              <option value="#">Default</option>
-              <option value="name">Name</option>
-            </select>
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search the website..."
+            />
           </div>
-          <div class="filter">
-            <label for="filter">Filter by:</label>
-            <select id="filter">
-              <option value="#">Default</option>
-              <option value="id">ID</option>
-            </select>
+          <div class="selectors">
+            <div class="sort">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option value="#">Default</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
+
+            <div class="filter">
+              <label for="filter">Filter by:</label>
+              <select id="filter">
+                <option value="#">Default</option>
+                <option value="id">ID</option>
+              </select>
+            </div>
           </div>
         </form>
       </article>

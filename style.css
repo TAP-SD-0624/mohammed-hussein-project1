@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  width: 100%;
+  max-width: 1920px;
   font-family: Nunito Sans;
   margin: 0;
   overflow-x: hidden;
@@ -101,13 +101,38 @@ p {
   color: var(--body-text);
 }
 
-.empty {
+/* .empty {
   height: 70px;
   width: 100%;
   display: flex;
   flex-direction: row;
+} */
+.empty {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--bg_default);
+  height: 100px;
+  width: 100%;
 }
+.left-tri {
+  width: 100%;
+  height: 50px;
+  background-color: var(--brand-secondary);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  position: absolute;
+}
+
 .right-tri {
+  width: 100%;
+  height: 50px;
+  background-color: var(--brand-primary);
+  clip-path: polygon(100% 0, 0 0, 0% 100%);
+  position: absolute;
+}
+
+/* .right-tri {
   position: absolute;
   width: 0;
   height: 0;
@@ -122,7 +147,7 @@ p {
   height: 0;
   border-left: 1300px solid var(--brand-primary);
   border-bottom: 68px solid transparent;
-}
+} */
 
 .search {
   height: 80px;
@@ -133,7 +158,6 @@ p {
   align-items: center;
 }
 .search-section {
-  height: 65%;
   width: 95%;
   display: flex;
   flex-direction: row;
@@ -146,9 +170,17 @@ p {
   color: var(--body-text);
 }
 
-.search-section #search {
-  height: 100%;
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
   width: 75%;
+}
+#search {
+  height: 100%;
+  width: 100%;
   border: none;
   border-radius: 20px;
   outline: none;
@@ -162,11 +194,16 @@ p {
   padding-top: 5px;
   width: 2%;
 }
-
+.selectors {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 25%;
+}
 .sort,
 .filter {
   height: 100%;
-  width: 12.5%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,15 +261,27 @@ p {
   border-radius: 10px;
 }
 
+.topic:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 30%);
+  transition: 200ms;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 30%);
+  transition: 200ms;
+}
+
 .topic-img {
   height: 45%;
   width: 100%;
+  background-color: var(--bg_default);
 }
 
 .topic-img img {
   height: 100%;
   width: 100%;
-  border-radius: 10px 10px 0 0;
 }
 
 .topic-details {
@@ -300,4 +349,130 @@ footer {
 footer span {
   height: 100%;
   color: var(--heart-color);
+}
+
+@media (max-width: 480px) {
+  .navbar nav button {
+    height: 35px;
+    width: 50px;
+    padding-left: 0;
+  }
+  .navbar nav button p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .dark p span,
+  .fav p span {
+    display: none;
+  }
+
+  .empty {
+    height: 50px;
+  }
+
+  .left-tri,
+  .right-tri {
+    height: 30px;
+  }
+
+  .welcoming div h2,
+  p {
+    width: 85%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .search {
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  .search-section {
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .searchBar {
+    height: 50%;
+    width: 100%;
+    border-bottom: solid 5px (--lines-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .searchBar p {
+    padding-left: 5px;
+  }
+
+  #search {
+    height: 80%;
+    padding-left: 20px;
+  }
+  .selectors {
+    height: 50%;
+    width: 100%;
+    border-top: solid 1px var(--lines-color);
+  }
+
+  .sort,
+  .filter {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sort label,
+  .filter label {
+    height: 30%;
+  }
+
+  #filter,
+  #sort {
+    padding-bottom: 10px;
+    height: 70%;
+    font-size: large;
+    font-weight: 400;
+  }
+
+  .topics-details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .topic {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .welcoming div h2,
+  p {
+    width: 85%;
+    text-align: left;
+    margin: 0;
+  }
+  .topics-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1499px) {
+  .welcoming div h2,
+  p {
+    width: 85%;
+    text-align: left;
+    margin: 0;
+  }
+  .topics-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1500px) {
+  .topics-details {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
