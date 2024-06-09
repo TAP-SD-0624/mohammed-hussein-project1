@@ -1,10 +1,6 @@
 const darkBtn = document.querySelector(".dark");
-// const header = document.querySelector("header");
-// const btn1 = document.querySelector(".dark");
-// const btn2 = document.querySelector(".fav");
-// const welcoming = document.querySelector(".welcoming-section");
-// const welP = document.querySelector(".welP");
-// const main = document.querySelector("main");
+const favBtn = document.querySelector(".fav");
+const favourites = document.querySelector(".favourites");
 
 function setTheme(theme) {
   return document.getElementById("theme").setAttribute("href", theme);
@@ -21,3 +17,26 @@ darkBtn.addEventListener("click", function () {
     }
   }
 });
+
+favBtn.addEventListener("click", function () {
+  favourites.classList.toggle("hidden");
+});
+
+window.onscroll = function () {
+  makeSticky();
+};
+
+// Get the header
+var header = document.querySelector(".header");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function makeSticky() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
