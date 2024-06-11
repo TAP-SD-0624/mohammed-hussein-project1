@@ -271,6 +271,11 @@ p {
   border-radius: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--body-text);
+}
+
 .topic:hover {
   cursor: pointer;
   box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 30%);
@@ -529,6 +534,10 @@ footer span {
   display: none;
 }
 
+.fav-topic {
+  width: 25%;
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   .welcoming div h2,
   p {
@@ -539,9 +548,12 @@ footer span {
   .topics-details {
     grid-template-columns: repeat(3, 1fr);
   }
+  .fav-topic {
+    width: 20%;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 1499px) {
+@media (min-width: 769px) and (max-width: 1440px) {
   .welcoming div h2,
   p {
     width: 85%;
@@ -551,10 +563,16 @@ footer span {
   .topics-details {
     grid-template-columns: repeat(3, 1fr);
   }
+  .fav-topic {
+    width: 10%;
+  }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1441px) {
   .topics-details {
     grid-template-columns: repeat(5, 1fr);
+  }
+  .fav-topic {
+    width: 10%;
   }
 }

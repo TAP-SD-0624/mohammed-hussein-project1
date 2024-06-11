@@ -5,7 +5,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   transition: background 2s;
-  background-color: var(--bg_body);
+
   font-family: Nunito Sans;
 }
 
@@ -143,8 +143,8 @@ p {
 .top-sec {
   width: 100%;
   height: 280px;
-  background-color: var(--body-text);
-  color: var(--bg_default);
+  background-color: #3a3939db;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -195,7 +195,12 @@ p {
   width: 20%;
   height: 144%;
   z-index: 1;
-  border: solid 1px black;
+  border: solid 2px var(--lines-color);
+}
+.topic-card:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 30%);
+  transition: 200ms;
 }
 .topic-card-img {
   width: 100%;
@@ -210,8 +215,8 @@ p {
 .topic-card-details {
   width: 100%;
   height: 50%;
-  background-color: var(--bg_default);
-  color: var(--body-text);
+  background-color: white;
+  color: #333333;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,6 +228,10 @@ p {
 .topic-card-details-text {
   width: 90%;
   height: 20%;
+}
+
+.topic-card-details-text p span {
+  font-weight: 700;
 }
 .topic-card-details-card {
   width: 90%;
@@ -266,6 +275,12 @@ p {
   padding-left: 0.55%;
 }
 
+button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 30%);
+  transition: 200ms;
+}
+
 .bottom-sec {
   width: 100%;
   height: 50%;
@@ -273,6 +288,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg_body);
 }
 .sub-topics {
   margin-top: 30px;
@@ -282,6 +298,7 @@ p {
   justify-content: center;
   align-items: start;
   border-left: solid 1px var(--lines-color);
+  color: var(--body-text);
 }
 .sub-topic {
   height: 50px;
@@ -394,6 +411,10 @@ footer span {
 .fav-topic-content p {
   color: goldenrod;
 }
+.hidden {
+  display: none;
+}
+
 @media (max-width: 480px) {
   .navbar nav button {
     height: 35px;
