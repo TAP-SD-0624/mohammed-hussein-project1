@@ -276,7 +276,7 @@ button:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .topic-details {
@@ -284,7 +284,7 @@ button:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
@@ -300,16 +300,19 @@ button:hover {
 
 .cate,
 .name {
+  height: auto;
   width: 100%;
   margin-top: 0;
 }
 
 .cate {
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .name {
-  margin-bottom: 45px;
+  margin: 0;
 }
 
 .topic-review {

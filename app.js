@@ -27,6 +27,7 @@ app.get(`/details/:id`, (req, res) => {
   const fileData = fs.readFileSync(filePath);
   const storedTopics = JSON.parse(fileData);
   let id = req.params.id;
+
   res.render("details", { topics: storedTopics, topicId: id });
 });
 
