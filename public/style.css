@@ -540,7 +540,7 @@ footer span {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1439px) {
   .welcoming div h2,
   p {
     width: 85%;
@@ -555,7 +555,7 @@ footer span {
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
   .topics-details {
     grid-template-columns: repeat(5, 1fr);
   }
