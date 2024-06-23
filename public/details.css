@@ -418,7 +418,16 @@ footer span {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
+  .top-sec {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 321px) and(max-width: 480px) {
   .navbar nav button {
     height: 35px;
     width: 50px;

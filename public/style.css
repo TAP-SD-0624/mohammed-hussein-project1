@@ -554,7 +554,7 @@ footer span {
   }
 }
 
-/* @media (min-width: 1440px) {
+@media (min-width: 1440px) {
   .welcoming div h2 p {
     width: 85%;
     text-align: center;
@@ -566,4 +566,4 @@ footer span {
   .fav-topic {
     width: 10%;
   }
-} */
+}
