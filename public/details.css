@@ -17,6 +17,7 @@ header {
   /* justify-content: space-between; */
   align-items: center;
   background-color: var(--bg_default);
+  border-bottom: solid 1px var(--lines-color);
 }
 
 .header.sticky {
@@ -300,20 +301,26 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  border-left: solid 1px var(--lines-color);
+  border-top: 60% 1px var(--lines-color);
   color: var(--body-text);
 }
 .sub-topic {
   height: 50px;
   width: 60%;
-  border: solid 1px var(--lines-color);
-  border-left: none;
+  border-bottom: solid 1px var(--lines-color);
+  border-right: solid 1px var(--lines-color);
+  border-left: solid 1px var(--lines-color);
   background: var(--bg_default);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1%;
+}
+
+.first {
+  border-top: solid 1px var(--lines-color);
+  border-radius: 5px 5px 0px 0px;
 }
 .sub-topic h1 {
   margin: 0;
@@ -419,11 +426,57 @@ footer span {
 }
 
 @media (max-width: 320px) {
+  .navbar nav button {
+    height: 35px;
+    width: 50px;
+    padding-left: 0;
+  }
+  .navbar nav button p {
+    padding-left: 0;
+    width: 100%;
+  }
+  .dark p span,
+  .fav p span {
+    display: none;
+  }
+
+  .left-tri,
+  .right-tri {
+    height: 30px;
+  }
+  .welcoming div h2,
+  p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
   .top-sec {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .text-sec,
+  .topic-card {
+    width: 90%;
+  }
+  .sub-topics {
+    width: 90%;
+  }
+  .sub-topic {
+    width: 100%;
+  }
+  .sub-topic p {
+    text-align: left;
+  }
+  .fav-topic {
+    width: 40%;
+  }
+
+  .topic-card-details-card button h1 {
+    font-size: 100%;
   }
 }
 
