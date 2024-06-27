@@ -18,6 +18,9 @@ header {
   align-items: center;
   background-color: var(--bg_default);
   border-bottom: solid 1px var(--lines-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header.sticky {
@@ -256,7 +259,7 @@ p {
   font-size: small;
 }
 
-.topic-card-details-card button {
+.add-fav {
   padding: 5% 10%;
   width: 80%;
   display: flex;
@@ -269,9 +272,11 @@ p {
   font-size: 100%;
   border: none;
 }
-.topic-card-details-card button h1 {
-  font-size: 110%;
+
+.active {
+  background-color: red;
 }
+
 .topic-card-details-card button span {
   font-size: large;
   height: 100%;
@@ -318,6 +323,10 @@ button:hover {
   gap: 1%;
 }
 
+.sub-topic:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
 .first {
   border-top: solid 1px var(--lines-color);
   border-radius: 5px 5px 0px 0px;
@@ -354,7 +363,7 @@ footer span {
 }
 
 .favourites {
-  height: 25%;
+  height: 200px;
   width: 100%;
   background-color: var(--bg_default);
   display: flex;
@@ -363,6 +372,8 @@ footer span {
   position: sticky;
   bottom: 0;
   z-index: 100;
+  border-top: solid 1px var(--lines-color);
+  overflow: auto;
 }
 
 .fav-content {
@@ -382,12 +393,22 @@ footer span {
 .fav-topics {
   height: 80%;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 10px;
 }
+
+.close-btn {
+  display: inline-block;
+  top: 0;
+  z-index: 100;
+  position: relative;
+  right: 500px;
+}
+
 .fav-topic {
   height: 80%;
-  width: 8%;
+  width: 100%;
   border: solid 1px var(--lines-color);
   border-radius: 10px;
 }
@@ -400,6 +421,7 @@ footer span {
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
 }
 
 .fav-topic-content {
@@ -471,16 +493,13 @@ footer span {
   .sub-topic p {
     text-align: left;
   }
-  .fav-topic {
-    width: 40%;
-  }
 
   .topic-card-details-card button h1 {
     font-size: 100%;
   }
 }
 
-@media (min-width: 321px) and(max-width: 480px) {
+@media (min-width: 321px) and (max-width: 480px) {
   .navbar nav button {
     height: 35px;
     width: 50px;
@@ -565,9 +584,6 @@ footer span {
   .sub-topic {
     width: 100%;
   }
-  .fav-topic {
-    width: 25%;
-  }
   .hidden {
     display: none;
   }
@@ -579,9 +595,6 @@ footer span {
     width: 85%;
     text-align: center;
     margin: 0;
-  }
-  .fav-topic {
-    width: 20%;
   }
   .top-sec {
     display: flex;
@@ -625,7 +638,6 @@ footer span {
     padding: 1%;
   }
 
-  .topic-card-details-card button h1,
   .topic-card-details-card button span {
     height: 100%;
     padding-top: 1%;

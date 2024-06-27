@@ -81,7 +81,7 @@
         <h1>"<%= numberOfTopics %>" Web Topics Found</h1>
         <section class="topics-details">
           <% for (const topic of topics) { %>
-          <a href="/details/<%= topic.id %>">
+          <a href="/details/<%= topic.id %>" data-id="<%= topic.id %>">
             <section class="topic">
               <div class="topic-img">
                 <img
@@ -122,38 +122,7 @@
         <div class="fav-text">
           <h3>My Favourite Topics</h3>
         </div>
-        <div class="fav-topics">
-          <div class="fav-topic">
-            <div class="fav-topic-img">
-              <img src="./Logos/react.webp" alt="react" />
-            </div>
-            <div class="fav-topic-content">
-              <h4>React</h4>
-              <p>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </p>
-            </div>
-          </div>
-          <div class="fav-topic">
-            <div class="fav-topic-img">
-              <img src="./Logos/cloud.jpeg" alt="cloud" />
-            </div>
-            <div class="fav-topic-content">
-              <h4>Cloud</h4>
-              <p>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="fav-topics"></div>
       </div>
     </section>
 

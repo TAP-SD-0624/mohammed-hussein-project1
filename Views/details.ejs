@@ -75,9 +75,13 @@
                             <div class="topic-card-details-text">
                                 <p><span><%= topics[i].topic%></span> by <a href="#"> <%= topics[i].name%></a></p>
                             </div>
-                            <div class="topic-card-details-card">
+                            <div class="topic-card-details-card" data-id="<%= topics[i].id %>">
                                 <h4>Intrested about this topic?</h4>
-                                <button><h1>Add to Favourites</h1> <span> <ion-icon name="heart-outline"></ion-icon> </span></button>
+                
+                                
+                                    <button class="add-fav" >Add to Favourites <span> <ion-icon name="heart-outline"></ion-icon> </span></button>
+                                
+                              
                                 <p>Unlimited Credits</p>
                             </div>
                         </div>
@@ -107,36 +111,7 @@
               <h3>My Favourite Topics</h3>
             </div>
             <div class="fav-topics">
-              <div class="fav-topic">
-                <div class="fav-topic-img">
-                  <img src="../Logos/react.webp" alt="react" />
-                </div>
-                <div class="fav-topic-content">
-                  <h4>React</h4>
-                  <p>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </p>
-                </div>
-              </div>
-              <div class="fav-topic">
-                <div class="fav-topic-img">
-                  <img src="../Logos/cloud.jpeg" alt="cloud" />
-                </div>
-                <div class="fav-topic-content">
-                  <h4>Cloud</h4>
-                  <p>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                  </p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -149,6 +124,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="/details.js"></script>
+    <script src="/details.js" defer></script>
   </body>
 </html>

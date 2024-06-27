@@ -355,7 +355,7 @@ footer span {
 }
 
 .favourites {
-  height: 25%;
+  height: 200px;
   width: 100%;
   background-color: var(--bg_default);
   display: flex;
@@ -364,6 +364,8 @@ footer span {
   position: sticky;
   bottom: 0;
   z-index: 100;
+  border-top: solid 1px var(--lines-color);
+  overflow: auto;
 }
 
 .fav-content {
@@ -383,15 +385,17 @@ footer span {
 .fav-topics {
   height: 80%;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 10px;
 }
 .fav-topic {
   height: 80%;
-  width: 8%;
+  width: 100%;
   border: solid 1px var(--lines-color);
   border-radius: 10px;
 }
+
 .fav-topic-img {
   width: 100%;
   height: 50%;
@@ -400,7 +404,7 @@ footer span {
 .fav-topic-img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .fav-topic-content {
@@ -421,6 +425,9 @@ footer span {
 
 .fav-topic-content p {
   color: goldenrod;
+}
+.hidden {
+  display: none;
 }
 @media (max-width: 480px) {
   .navbar nav button {
@@ -518,19 +525,12 @@ footer span {
   display: none;
 }
 
-.fav-topic {
-  width: 25%;
-}
-
 @media (min-width: 481px) and (max-width: 768px) {
   .welcoming div h2,
   p {
     width: 85%;
     text-align: left;
     margin: 0;
-  }
-  .fav-topic {
-    width: 20%;
   }
 }
 
@@ -540,9 +540,6 @@ footer span {
     text-align: center;
     margin: 0;
   }
-  .fav-topic {
-    width: 10%;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -550,9 +547,5 @@ footer span {
     width: 85%;
     text-align: center;
     margin: 0;
-  }
-
-  .fav-topic {
-    width: 10%;
   }
 }

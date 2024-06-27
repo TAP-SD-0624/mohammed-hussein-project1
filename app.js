@@ -37,6 +37,8 @@ app.post("", (req, res) => {
   const fileData = fs.readFileSync(filePath);
   let storedTopics = JSON.parse(fileData);
 
+  console.log(req.body.topicId);
+
   const filteredTopics = storedTopics.filter(
     (topic) =>
       topic.topic.includes(`${search.toUpperCase()}`) ||
@@ -48,6 +50,12 @@ app.post("", (req, res) => {
     numberOfTopics: filteredTopics.length,
     search: search,
   });
+});
+
+app.post("", (req, res) => {
+  console.log(req.body);
+
+  res.render("index");
 });
 
 const PORT = process.env.PORT || 3000;
