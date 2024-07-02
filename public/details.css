@@ -260,21 +260,26 @@ p {
 }
 
 .add-fav {
+<<<<<<< HEAD:public/details.css
   padding: 5% 10%;
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: start;
+=======
+  width: 85%;
+  height: 50%;
+  font-size: medium;
+>>>>>>> c3fd92e (change the Project to vanilla JS):details.css
   background-color: var(--brand-secondary);
   color: white;
-  font-family: Nunito Sans;
-  font-size: 100%;
-  border: none;
+  border: solid 2px var(--lines-color);
 }
 
 .active {
   background-color: red;
+<<<<<<< HEAD:public/details.css
 }
 
 .topic-card-details-card button span {
@@ -282,6 +287,8 @@ p {
   height: 100%;
   padding-top: 1%;
   padding-left: 0.55%;
+=======
+>>>>>>> c3fd92e (change the Project to vanilla JS):details.css
 }
 
 button:hover {
