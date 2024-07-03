@@ -6,7 +6,11 @@ const header = document.querySelector(".header");
 const topics_list = document.querySelector(".topics-details");
 const search = document.getElementById("search");
 const topicsCount = document.querySelector(".topicsCount");
+const sort = document.getElementById("sort");
+const filter = document.getElementById("filter");
 //.................................................................................................
+
+// fetching data and applying search, sort and filter
 
 const topics = [];
 
@@ -24,6 +28,48 @@ fetch("./topics.json")
         );
         displayOnHtml(filteredArr);
       } else if (topics.length > 0) {
+        displayOnHtml(topics);
+      }
+    });
+    sort.addEventListener("change", (e) => {
+      const sortedBy = e.target.value;
+      if (sortedBy) {
+        if (sortedBy === "topic") {
+          let sortedData = topics.sort((a, b) => {
+            if (a.topic < b.topic) {
+              return -1;
+            }
+            if (a.topic > b.topic) {
+              return 1;
+            }
+            return 0;
+          });
+          displayOnHtml(sortedData);
+        } else if (sortedBy === "name") {
+          let sortedData = topics.sort((a, b) => {
+            if (a.name < b.name) {
+              return -1;
+            }
+            if (a.name > b.name) {
+              return 1;
+            }
+            return 0;
+          });
+          displayOnHtml(sortedData);
+        }
+      } else {
+        displayOnHtml(topics);
+      }
+    });
+
+    filter.addEventListener("change", (e) => {
+      const filteredBy = e.target.value;
+      if (filteredBy) {
+        const filteredArr = topics.filter(
+          (topic) => topic.category === filteredBy
+        );
+        displayOnHtml(filteredArr);
+      } else {
         displayOnHtml(topics);
       }
     });
