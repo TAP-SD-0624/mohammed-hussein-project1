@@ -33,32 +33,31 @@ fetch("./topics.json")
     });
     sort.addEventListener("change", (e) => {
       const sortedBy = e.target.value;
-      if (sortedBy) {
-        if (sortedBy === "topic") {
-          let sortedData = topics.sort((a, b) => {
-            if (a.topic < b.topic) {
-              return -1;
-            }
-            if (a.topic > b.topic) {
-              return 1;
-            }
-            return 0;
-          });
-          displayOnHtml(sortedData);
-        } else if (sortedBy === "name") {
-          let sortedData = topics.sort((a, b) => {
-            if (a.name < b.name) {
-              return -1;
-            }
-            if (a.name > b.name) {
-              return 1;
-            }
-            return 0;
-          });
-          displayOnHtml(sortedData);
-        }
-      } else {
-        displayOnHtml(topics);
+      console.log(sortedBy);
+      if (sortedBy === "topic") {
+        let sortedData = topics.sort((a, b) => {
+          if (a.topic < b.topic) {
+            return -1;
+          }
+          if (a.topic > b.topic) {
+            return 1;
+          }
+          return 0;
+        });
+        displayOnHtml(sortedData);
+      } else if (sortedBy === "name") {
+        let sortedData = topics.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        displayOnHtml(sortedData);
+      } else if (sortedBy === "") {
+        displayOnHtml(data);
       }
     });
 
