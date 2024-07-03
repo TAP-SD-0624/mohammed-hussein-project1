@@ -80,7 +80,7 @@ const displayOnHtml = (topics) => {
   topics_list.innerHTML = "";
   topics.forEach((topic) => {
     let atopic = document.createElement("a");
-    atopic.setAttribute("href", `/details.html?id=${topic.id}`);
+    atopic.setAttribute("href", `./details.html?id=${topic.id}`);
     atopic.setAttribute("data-id", `${topic.id}`);
     atopic.innerHTML = `<section class="topic">
             <div class="topic-img">
