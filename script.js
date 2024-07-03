@@ -69,7 +69,7 @@ fetch("./topics.json")
         );
         displayOnHtml(filteredArr);
       } else {
-        displayOnHtml(topics);
+        displayOnHtml(data);
       }
     });
   });

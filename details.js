@@ -840,8 +840,6 @@ const listTopics = [
   },
 ];
 
-//2.1 - add the event to add to fav. button:
-
 //2.2 - add and remove the topic form local storage:
 
 const addToFavoraite = (topic_id) => {
