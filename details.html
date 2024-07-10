@@ -9,25 +9,21 @@
     rel="stylesheet"
   />
     <link id="theme" rel="stylesheet" href="/light.css" />
-    <link rel="stylesheet" href="/details.css" />
+    <link rel="stylesheet" href="./scss/details.css" />
   </head>
-  <body>
-    <body>
-        <header class="header">
-          <section class="navbar">
-            <a href="/index.html"><h3>Web Topics</h3></a>
-            <nav>
-              <button class="dark">
-                <p>
-                  <ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span>
-                </p>
-              </button>
-              <button class="fav">
-                <p>
-                  <ion-icon name="heart-outline"></ion-icon><span>Favourites</span>
-                </p>
-              </button>
-            </nav>
+    <body class="d-flex flex-column justify-content-center align-items-center">
+      <div class="container m-0 p-0 mw-100">  
+      <header class="header ps-5 pe-5">
+          <section class="navbar pt-3 pb-3">
+            <a href="/" class="anc"><h3 class="home fs-5">Web Topics</h3></a>
+          <nav>
+            <button class="dark btn align-start">
+              <ion-icon name="moon-outline"></ion-icon><span> Dark Mode</span>
+            </button>
+            <button class="fav btn">
+              <ion-icon name="heart-outline"></ion-icon><span>Favourites</span>
+            </button>
+          </nav>
           </section>
         </header>
         <main>
@@ -36,34 +32,36 @@
               <div class="left-tri"></div>
               <div class="right-tri"></div>
             </div>
-            <section class="welcoming">
+            <section class="welcoming d-flex flex-column">
               <div>
-                <h2>Welcome to our website!</h2>
+                <h2 class="welcome fs-4">Welcome to our website!</h2>
                 <p class="welP">
                   We have a new design that's fresh, modern, and easy to use
                 </p>
               </div>
             </section>
           </section>
-          <section class="topic-details">
+          <section class="topic-details mw-100">
 
-                <section class = 'top-sec'>
+                <section class = 'top-sec d-flex flex-row justify-content-center align-items-center w-100' style="height: 280px;">
                 
                    
                 </section>
-                <div class="bottom-sec">
-                    <div class="sub-topics">
+                <div class="bottom-sec pb-4 w-100 h-50 d-flex flex-column justify-content-center align-items-center">
+                    <div class="sub-topics d-flex flex-column justify-content-center align-items-start mt-4" style="width: 60%;">
                        
                     </div>
                 </div>
 
             </section>  
         </main>
-        <footer>
-          <h3>
-            Developed with <span><ion-icon name="heart"></ion-icon></span> 2023
-          </h3>
-        </footer>
+        <footer
+        class="footer h-10 w-100 d-flex justify-content-center align-items-center"
+      >
+        <h3>
+          Developed with <span><ion-icon name="heart"></ion-icon></span> 2023
+        </h3>
+      </footer>
 
         <section class="favourites hidden">
           <div class="fav-content">
@@ -74,6 +72,7 @@
               <div class="fav-topic"></div>
                 
         </section>
+      </div>
     
         <script
       type="module"

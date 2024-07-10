@@ -14,6 +14,7 @@ const filter = document.getElementById("filter");
 
 const topics = [];
 
+//in function
 fetch("./topics.json")
   .then((res) => res.json())
   .then((data) => {
@@ -79,36 +80,34 @@ const displayOnHtml = (topics) => {
   topics_list.innerHTML = "";
   topics.forEach((topic) => {
     let atopic = document.createElement("a");
+    atopic.setAttribute(
+      "class",
+      "topic card g-col-10 g-col-sm-5 g-col-md-5 g-col-lg-3 g-col-xl-3 g-col-xxl-2"
+    );
     atopic.setAttribute("href", `./details.html?id=${topic.id}`);
     atopic.setAttribute("data-id", `${topic.id}`);
-    atopic.innerHTML = `<section class="topic">
-            <div class="topic-img">
-              <img src="./Logos/${topic.image}" alt="${topic.topic}" />
-            </div>
-            <div class="topic-details">
-              <div class="topic-name">
-                <p class="cate">${topic.category}</p>
-                <h4 class="name">${topic.topic}</h4>
-              </div>
-              <div class="topic-review">
-                <p class="rate">
+    atopic.setAttribute("style", "width: 16rem; height: 300px;");
+    atopic.innerHTML = `
+              <div>
+  <img src="./Logos/${topic.image}" class="card-img-top object-fit-cover" style ="height: 150px" alt="${topic.topic}">
+  <div class="card-body p-3 pe-0 pb-0 pt-2" style ="height: 150px">
+    <p class="mb-0 w-100 text-truncate" style ="font-size : 14px; font-weight: 600">${topic.category}</hp>
+    <h5 class="card-title fs-6 fw-bold text-truncate">${topic.topic}</h5>
+    <p class="rate card-text fs-6 w-100 pt-4 mb-0"> <ion-icon name="star"></ion-icon>
                   <ion-icon name="star"></ion-icon>
                   <ion-icon name="star"></ion-icon>
                   <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star-outline"></ion-icon>
-                </p>
-                <h4 class="author">Author: ${topic.name}</h4>
-              </div>
-            </div>
-          </section>`;
+                  <ion-icon name="star-outline"></ion-icon></p>
+    <p class="author fs-6 w-100  mb-0" >Author: ${topic.name}</p>
+  </div>
+</div>`;
 
     topics_list.appendChild(atopic);
   });
 };
 
 //.................................................................................................
-//to make the header sticky
+// to make the header sticky
 window.onscroll = function () {
   makeSticky();
 };
@@ -164,14 +163,18 @@ const addTopicsToHtml = (topics) => {
   if (topics.length > 0) {
     topics.forEach((topic) => {
       let newTopic = document.createElement("div");
-      newTopic.classList.add("fav-topic");
+      newTopic.setAttribute(
+        "class",
+        "fav-topic h-80 g-col-9 g-col-sm-3 g-col-md-3 g-col-lg-3 g-col-xl-2 g-col-xxl-1"
+      );
+      newTopic.setAttribute("style", "width: 9rem");
 
-      newTopic.innerHTML = `<div class="fav-topic-img">
-                  <img src="../Logos/${topic.image}" alt="${topic.topic}" />
+      newTopic.innerHTML = `<div class="fav-topic-img h-50">
+                  <img src="../Logos/${topic.image}" alt="${topic.topic}" class="w-100 h-100" />
                 </div>
-                <div class="fav-topic-content">
-                  <h4>${topic.topic}</h4>
-                  <p>
+                <div class="fav-topic-content h-50 d-flex flex-column justify-content-space-around align-items-center ">
+                  <h4 class="fs-6 fw-bold w-100 ps-2 pt-2 mb-0 text-truncate">${topic.topic}</h4>
+                  <p class="fs-6 fw-bold w-100 ps-2 pb-2 mb-0 text-truncate">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>

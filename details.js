@@ -46,52 +46,62 @@ fetch("./topics.json")
 const displayOnHtml = (topic) => {
   topic.forEach((t) => {
     topSec.innerHTML = `
-    <div class="text-sec">
-                  <div class="topic-info">
-                      <h4 class="cate">${t.category}</h4>
-                      <h1 class="name">${t.topic}</h1>
-                      <h6 class="rating"> 
+    <div class="text-sec d-flex flex-column justify-content-around align-items-start" style=" width:40% ; height:100%">
+                  <div class="topic-info d-flex flex-column justify-content-center pt-4" style ="width : 100% ; height : 20%">
+                      <p class="cate fs-6 m-0">${t.category}</p>
+                      <p class="name m-0 fw-bold">${t.topic}</p>
+                      <p class="rating m-0"> 
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star-outline"></ion-icon>
-                      </h6>
+                      </p>
                   </div>
-                  <div class="topic-desc">
-                      <p>
+                  <div class="topic-desc" style="width : 91%">
+                      <p class="d-flex align-items-start w-100 pt-2">
                          ${t.description}
                       </p>
                   </div>
               </div>`;
 
     const topic_card = document.createElement("div");
-    topic_card.setAttribute("class", "topic-card");
+    topic_card.setAttribute("class", "topic-card z-1");
+    topic_card.setAttribute(
+      "style",
+      "width : 20% ; height : 144%; margin-top : 11%"
+    );
+
     topic_card.innerHTML = `
-                  <div class="topic-card-img">
-                      <img src="./Logos/${t.image}" alt="${t.topic}">
+                  <div class="topic-card-img w-100 h-50">
+                      <img src="./Logos/${t.image}" alt="${t.topic}" class="w-100 h-100 object-fit-cover">
                   </div>
-                  <div class="topic-card-details">
-                      <div class="topic-card-details-text">
-                          <p><span>${t.topic}</span> by <a href="#">${t.name}</a></p>
+                  <div class="topic-card-details w-100 h-50 d-flex flex-column justify-content-center align-items-center">
+                      <div class="topic-card-details-text" style = "width:90% ; height:20%">
+                          <p class="m-0 w-100"><span class="fw-bold">${t.topic}</span> by <a href="#">${t.name}</a></p>
                       </div>
-                      <div class="topic-card-details-card" data-id=${t.id}>
-                          <h4>Intrested about this topic?</h4>
-                          <button class="add-fav">Add to Favourites<ion-icon name="heart-outline"></ion-icon></button>
-                          <p>Unlimited Credits</p>
+                      <div class="topic-card-details-card d-flex flex-column justify-content-around align-items-center" style = "height : 70% ; width : 90%"  data-id=${t.id}>
+                          <h6 class = "m-0">Intrested about this topic?</h6>
+                          <button class="add-fav" style = "width : 85% ; height : 40% ">Add to Favourites<ion-icon name="heart-outline"></ion-icon></button>
+                          <p class="m-0">Unlimited Credits</p>
                       </div>
                   </div>
 `;
     topSec.appendChild(topic_card);
     t.subtopics.forEach((subTopic) => {
       let nSubTopic = document.createElement("div");
-      nSubTopic.setAttribute("class", "sub-topic");
-      nSubTopic.innerHTML = `<span><ion-icon name="checkmark-circle-outline"></ion-icon></span><p>${subTopic}</p>`;
+      nSubTopic.setAttribute(
+        "class",
+        "sub-topic d-flex justify-content-center align-items-center"
+      );
+      nSubTopic.setAttribute("style", "height:50px ; width:60%");
+      nSubTopic.innerHTML = `<p class = "align-middle m-0 w-100 ps-4"><span class=" pe-2"><ion-icon name="checkmark-circle-outline"></ion-icon></span>${subTopic}</p>`;
       subTopics.appendChild(nSubTopic);
     });
     let firstSub = document.createElement("div");
-    firstSub.setAttribute("class", "sub-topic first");
-    firstSub.innerHTML = `<h1>${t.topic} Sub Topics</h1>`;
+    firstSub.setAttribute("class", "sub-topic first ps-4");
+    firstSub.setAttribute("style", "width: 60%");
+    firstSub.innerHTML = `<h4 class=" m-0 pt-3 pb-3" style ="width:90%">${t.topic} Sub Topics</h4>`;
     subTopics.insertAdjacentElement("afterbegin", firstSub);
 
     //.............................................................................
