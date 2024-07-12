@@ -884,23 +884,25 @@ const addTopicsToHtml = (topics) => {
   if (topics.length > 0) {
     topics.forEach((topic) => {
       let fav_topic = document.createElement("div");
-      fav_topic.setAttribute("class", "fav-topic");
+      fav_topic.setAttribute(
+        "class",
+        "fav-topic h-80 g-col-9 g-col-sm-3 g-col-md-3 g-col-lg-3 g-col-xl-2 g-col-xxl-1"
+      );
+      fav_topic.setAttribute("style", "width: 9rem");
       fav_topic.setAttribute("data-id", `${topic.id}`);
 
-      fav_topic.innerHTML = `
-      <div class="fav-topic-img">
-                  <img src="../Logos/${topic.image}" alt="${topic.topic}" />
+      fav_topic.innerHTML = `<div class="fav-topic-img h-50">
+                  <img src="../Logos/${topic.image}" alt="${topic.topic}" class="w-100 h-100" />
                 </div>
-                <div class="fav-topic-content">
-                  <h4 class = "topic-name">${topic.topic}</h4>
-                  <p>
+                <div class="fav-topic-content h-50 d-flex flex-column justify-content-space-around align-items-center ">
+                  <h4 class="fs-6 fw-bold w-100 ps-2 pt-2 mb-0 text-truncate">${topic.topic}</h4>
+                  <p class="fs-6 fw-bold w-100 ps-2 pb-2 mb-0 text-truncate">
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star"></ion-icon>
                     <ion-icon name="star-outline"></ion-icon>
                   </p>
-                 
                 </div>
               </div>
                 </div>`;
